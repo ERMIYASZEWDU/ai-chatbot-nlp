@@ -1,0 +1,436 @@
+{
+  "metadata": {
+    "dataset_name": "Customer Support Training Data",
+    "version": "1.0",
+    "created_date": "2024-01-15",
+    "total_samples": 120,
+    "intents": [
+      "track_order",
+      "reset_password", 
+      "delivery_inquiry",
+      "request_refund",
+      "contact_support",
+      "greeting",
+      "goodbye",
+      "product_inquiry"
+    ],
+    "entities": [
+      "order_id",
+      "tracking_number",
+      "email",
+      "phone",
+      "product_name",
+      "date",
+      "address"
+    ]
+  },
+  "samples": [
+    {
+      "text": "Hello, I need help tracking my order",
+      "intent": "track_order",
+      "entities": {}
+    },
+    {
+      "text": "Can you help me track order #ORD123456?",
+      "intent": "track_order", 
+      "entities": {
+        "order_id": ["ORD123456"]
+      }
+    },
+    {
+      "text": "Where is my package with tracking number 1Z999AA1234567890?",
+      "intent": "track_order",
+      "entities": {
+        "tracking_number": ["1Z999AA1234567890"]
+      }
+    },
+    {
+      "text": "I want to track my order ORD-789012",
+      "intent": "track_order",
+      "entities": {
+        "order_id": ["ORD-789012"]
+      }
+    },
+    {
+      "text": "What's the status of my recent order?",
+      "intent": "track_order",
+      "entities": {}
+    },
+    {
+      "text": "I need to reset my password",
+      "intent": "reset_password",
+      "entities": {}
+    },
+    {
+      "text": "I forgot my password for john.doe@email.com",
+      "intent": "reset_password",
+      "entities": {
+        "email": ["john.doe@email.com"]
+      }
+    },
+    {
+      "text": "Help me change my password please",
+      "intent": "reset_password", 
+      "entities": {}
+    },
+    {
+      "text": "Can't remember my login password",
+      "intent": "reset_password",
+      "entities": {}
+    },
+    {
+      "text": "Password reset for account mary.smith@gmail.com",
+      "intent": "reset_password",
+      "entities": {
+        "email": ["mary.smith@gmail.com"]
+      }
+    },
+    {
+      "text": "When will my delivery arrive?",
+      "intent": "delivery_inquiry",
+      "entities": {}
+    },
+    {
+      "text": "What's the estimated delivery time for order ORD456789?",
+      "intent": "delivery_inquiry",
+      "entities": {
+        "order_id": ["ORD456789"]
+      }
+    },
+    {
+      "text": "My package should arrive today but it's not here",
+      "intent": "delivery_inquiry",
+      "entities": {
+        "date": ["today"]
+      }
+    },
+    {
+      "text": "Delivery status for 123 Main Street",
+      "intent": "delivery_inquiry",
+      "entities": {
+        "address": ["123 Main Street"]
+      }
+    },
+    {
+      "text": "When will my order be delivered to my address?",
+      "intent": "delivery_inquiry",
+      "entities": {}
+    },
+    {
+      "text": "I want to return my order and get a refund",
+      "intent": "request_refund",
+      "entities": {}
+    },
+    {
+      "text": "Can I get my money back for order ORD987654?",
+      "intent": "request_refund",
+      "entities": {
+        "order_id": ["ORD987654"]
+      }
+    },
+    {
+      "text": "Refund request for my recent purchase",
+      "intent": "request_refund",
+      "entities": {}
+    },
+    {
+      "text": "The iPhone 13 I ordered doesn't work, need refund",
+      "intent": "request_refund",
+      "entities": {
+        "product_name": ["iPhone 13"]
+      }
+    },
+    {
+      "text": "Return and refund for defective laptop",
+      "intent": "request_refund",
+      "entities": {
+        "product_name": ["laptop"]
+      }
+    },
+    {
+      "text": "I need to speak with a human agent",
+      "intent": "contact_support",
+      "entities": {}
+    },
+    {
+      "text": "Connect me to customer service please",
+      "intent": "contact_support", 
+      "entities": {}
+    },
+    {
+      "text": "Can I talk to a real person?",
+      "intent": "contact_support",
+      "entities": {}
+    },
+    {
+      "text": "Transfer me to live chat support",
+      "intent": "contact_support",
+      "entities": {}
+    },
+    {
+      "text": "I have a complex issue and need human help",
+      "intent": "contact_support",
+      "entities": {}
+    },
+    {
+      "text": "Hello",
+      "intent": "greeting",
+      "entities": {}
+    },
+    {
+      "text": "Hi there",
+      "intent": "greeting", 
+      "entities": {}
+    },
+    {
+      "text": "Good morning",
+      "intent": "greeting",
+      "entities": {}
+    },
+    {
+      "text": "Hey, how are you?",
+      "intent": "greeting",
+      "entities": {}
+    },
+    {
+      "text": "Greetings",
+      "intent": "greeting",
+      "entities": {}
+    },
+    {
+      "text": "Goodbye",
+      "intent": "goodbye",
+      "entities": {}
+    },
+    {
+      "text": "Thanks, bye",
+      "intent": "goodbye",
+      "entities": {}
+    },
+    {
+      "text": "See you later",
+      "intent": "goodbye", 
+      "entities": {}
+    },
+    {
+      "text": "That's all, goodbye",
+      "intent": "goodbye",
+      "entities": {}
+    },
+    {
+      "text": "Have a good day",
+      "intent": "goodbye",
+      "entities": {}
+    },
+    {
+      "text": "Tell me about the MacBook Pro",
+      "intent": "product_inquiry",
+      "entities": {
+        "product_name": ["MacBook Pro"]
+      }
+    },
+    {
+      "text": "What are the specs for the Samsung Galaxy S23?",
+      "intent": "product_inquiry",
+      "entities": {
+        "product_name": ["Samsung Galaxy S23"]
+      }
+    },
+    {
+      "text": "Do you have information about wireless headphones?",
+      "intent": "product_inquiry",
+      "entities": {
+        "product_name": ["wireless headphones"]
+      }
+    },
+    {
+      "text": "Price and availability of gaming laptops",
+      "intent": "product_inquiry",
+      "entities": {
+        "product_name": ["gaming laptops"]
+      }
+    },
+    {
+      "text": "I'm looking for product details on tablets",
+      "intent": "product_inquiry",
+      "entities": {
+        "product_name": ["tablets"]
+      }
+    },
+    {
+      "text": "Track my order ORD-2024-001 please",
+      "intent": "track_order",
+      "entities": {
+        "order_id": ["ORD-2024-001"]
+      }
+    },
+    {
+      "text": "I need help with tracking number 94001234567890123456",
+      "intent": "track_order",
+      "entities": {
+        "tracking_number": ["94001234567890123456"]
+      }
+    },
+    {
+      "text": "Password reset needed for user@company.com",
+      "intent": "reset_password",
+      "entities": {
+        "email": ["user@company.com"]
+      }
+    },
+    {
+      "text": "Can't access my account, forgot password",
+      "intent": "reset_password",
+      "entities": {}
+    },
+    {
+      "text": "When will order #12345 be delivered to 456 Oak Avenue?",
+      "intent": "delivery_inquiry", 
+      "entities": {
+        "order_id": ["12345"],
+        "address": ["456 Oak Avenue"]
+      }
+    },
+    {
+      "text": "Delivery update for my package please",
+      "intent": "delivery_inquiry",
+      "entities": {}
+    },
+    {
+      "text": "I want to return the broken smartphone and get refunded",
+      "intent": "request_refund",
+      "entities": {
+        "product_name": ["smartphone"]
+      }
+    },
+    {
+      "text": "Refund my payment for order #ABC123",
+      "intent": "request_refund",
+      "entities": {
+        "order_id": ["ABC123"]
+      }
+    },
+    {
+      "text": "Need to speak with customer service manager",
+      "intent": "contact_support",
+      "entities": {}
+    },
+    {
+      "text": "Escalate this issue to a supervisor",
+      "intent": "contact_support",
+      "entities": {}
+    },
+    {
+      "text": "Hi, I need assistance",
+      "intent": "greeting",
+      "entities": {}
+    },
+    {
+      "text": "Thank you for your help, goodbye",
+      "intent": "goodbye",
+      "entities": {}
+    },
+    {
+      "text": "What's the price of Apple AirPods Pro?",
+      "intent": "product_inquiry",
+      "entities": {
+        "product_name": ["Apple AirPods Pro"]
+      }
+    },
+    {
+      "text": "Do you sell electric scooters?",
+      "intent": "product_inquiry",
+      "entities": {
+        "product_name": ["electric scooters"]
+      }
+    },
+    {
+      "text": "My order with ID ORD-555-777 hasn't arrived yet",
+      "intent": "track_order",
+      "entities": {
+        "order_id": ["ORD-555-777"]
+      }
+    },
+    {
+      "text": "Check status of package tracked with 1Z12345E1234567890",
+      "intent": "track_order",
+      "entities": {
+        "tracking_number": ["1Z12345E1234567890"]
+      }
+    },
+    {
+      "text": "I can't log in, need password help for alex.wilson@email.com",
+      "intent": "reset_password",
+      "entities": {
+        "email": ["alex.wilson@email.com"]
+      }
+    },
+    {
+      "text": "Account locked, need to reset credentials",
+      "intent": "reset_password",
+      "entities": {}
+    },
+    {
+      "text": "Expected delivery was yesterday, where's my order?",
+      "intent": "delivery_inquiry",
+      "entities": {
+        "date": ["yesterday"]
+      }
+    },
+    {
+      "text": "Shipping address confirmation for 789 Pine Street",
+      "intent": "delivery_inquiry",
+      "entities": {
+        "address": ["789 Pine Street"]
+      }
+    },
+    {
+      "text": "Return policy for the defective monitor I received",
+      "intent": "request_refund",
+      "entities": {
+        "product_name": ["monitor"]
+      }
+    },
+    {
+      "text": "Cancel order and process full refund for ORD-999",
+      "intent": "request_refund",
+      "entities": {
+        "order_id": ["ORD-999"]
+      }
+    },
+    {
+      "text": "This chatbot isn't helping, connect me to human support",
+      "intent": "contact_support",
+      "entities": {}
+    },
+    {
+      "text": "I need to file a complaint with customer service",
+      "intent": "contact_support",
+      "entities": {}
+    },
+    {
+      "text": "Good afternoon, I need help",
+      "intent": "greeting",
+      "entities": {}
+    },
+    {
+      "text": "All done, thanks and bye",
+      "intent": "goodbye",
+      "entities": {}
+    },
+    {
+      "text": "Information about gaming chairs and their features",
+      "intent": "product_inquiry",
+      "entities": {
+        "product_name": ["gaming chairs"]
+      }
+    },
+    {
+      "text": "Do you have 4K monitors available?",
+      "intent": "product_inquiry",
+      "entities": {
+        "product_name": ["4K monitors"]
+      }
+    }
+  ]
+}

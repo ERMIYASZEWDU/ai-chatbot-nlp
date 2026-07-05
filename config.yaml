@@ -1,0 +1,221 @@
+# AI Chatbot NLP Configuration
+# Version: 2.0.0
+
+# Application Settings
+app:
+  name: "AI Chatbot NLP"
+  version: "2.0.0"
+  environment: "development"
+
+# Model Configuration
+model:
+  intent_classifier:
+    algorithm: "RandomForest"
+    n_estimators: 100
+    max_depth: 10
+    min_samples_split: 2
+    random_state: 42
+  
+  entity_extractor:
+    algorithm: "hybrid"  # hybrid, rule_based, spacy
+    spacy_model: "en_core_web_sm"
+  
+  confidence_threshold: 0.7
+  max_response_length: 500
+  fallback_threshold: 0.4
+
+# NLP Processing Settings
+nlp:
+  tokenization:
+    remove_stopwords: true
+    lemmatization: true
+    lowercase: true
+    min_token_length: 2
+  
+  vectorization:
+    use_tfidf: true
+    use_ngrams: true
+    ngram_range: [1, 2]
+    max_features: 5000
+    min_df: 1
+    max_df: 0.95
+
+# Intent Definitions
+intents:
+  - name: "track_order"
+    description: "Customer wants to track their order status"
+    patterns:
+      - "track my order"
+      - "where is my package"
+      - "order status"
+      - "check order"
+    entities: ["order_id", "tracking_number"]
+    priority: 1
+  
+  - name: "reset_password"
+    description: "Customer needs to reset their password"
+    patterns:
+      - "reset password"
+      - "forgot password"
+      - "change password"
+      - "can't login"
+    entities: ["email", "username"]
+    priority: 2
+  
+  - name: "delivery_inquiry"
+    description: "Customer asking about delivery timing"
+    patterns:
+      - "when will it arrive"
+      - "delivery time"
+      - "shipping info"
+      - "delivery date"
+    entities: ["order_id", "address"]
+    priority: 2
+  
+  - name: "request_refund"
+    description: "Customer wants a refund or return"
+    patterns:
+      - "refund my order"
+      - "return item"
+      - "get money back"
+      - "cancel order"
+    entities: ["order_id", "reason", "amount"]
+    priority: 3
+  
+  - name: "contact_support"
+    description: "Customer needs human support"
+    patterns:
+      - "talk to human"
+      - "customer service"
+      - "speak to agent"
+      - "live agent"
+    entities: ["issue_type", "priority"]
+    priority: 1
+  
+  - name: "greeting"
+    description: "Customer greeting"
+    patterns:
+      - "hello"
+      - "hi"
+      - "hey"
+      - "good morning"
+      - "good afternoon"
+    entities: []
+    priority: 5
+  
+  - name: "goodbye"
+    description: "Customer ending conversation"
+    patterns:
+      - "bye"
+      - "goodbye"
+      - "see you later"
+      - "thanks bye"
+    entities: []
+    priority: 5
+  
+  - name: "product_inquiry"
+    description: "Customer asking about products"
+    patterns:
+      - "product information"
+      - "tell me about"
+      - "what is"
+    entities: ["product_name"]
+    priority: 4
+
+# Response Templates
+responses:
+  track_order: |
+    I can help you track your order. 
+    Please provide your order ID or tracking number.
+    
+  reset_password: |
+    I'll help you reset your password securely.
+    Please provide the email address associated with your account.
+    
+  delivery_inquiry: |
+    Let me check your delivery status.
+    Could you share your order ID?
+    
+  request_refund: |
+    I understand you'd like to request a refund.
+    Can you provide your order ID and the reason for the refund?
+    
+  contact_support: |
+    I'm connecting you with our support team.
+    A human agent will be with you shortly.
+    
+  greeting: |
+    Hello! I'm your AI customer support assistant.
+    How can I help you today?
+    
+  goodbye: |
+    Thank you for contacting us!
+    Have a wonderful day!
+    
+  product_inquiry: |
+    I'd be happy to help you with product information.
+    Which product are you interested in?
+    
+  fallback: |
+    I'm sorry, I didn't quite understand that.
+    Could you please rephrase your question?
+    I can help with:
+    • Order tracking
+    • Password reset
+    • Delivery inquiries
+    • Refund requests
+    • Connecting to support
+
+# Conversation Settings
+conversation:
+  max_turns: 50
+  session_timeout: 3600  # seconds
+  context_window: 10  # number of turns to remember
+  
+  escalation:
+    enabled: true
+    triggers:
+      - low_confidence
+      - user_request
+      - complex_intent
+    threshold: 3  # number of failed attempts
+
+# Analytics Configuration
+analytics:
+  enabled: true
+  track_conversations: true
+  track_performance: true
+  
+  metrics:
+    - response_time
+    - confidence_score
+    - intent_accuracy
+    - conversation_length
+    - escalation_rate
+    - resolution_rate
+  
+  retention_days: 30
+  export_formats: ["json", "csv"]
+
+# Logging Configuration
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "structured"  # structured, text
+  file: "logs/app.log"
+  max_file_size: 10485760  # 10MB
+  backup_count: 5
+  console: true
+
+# Performance Settings
+performance:
+  cache_enabled: true
+  cache_timeout: 300  # seconds
+  max_concurrent_sessions: 100
+  rate_limit_per_minute: 60
+  response_timeout: 30
+
+# Security Settings
+security:
+  input_validation: true
+  max_message_length: 1000
+  sanitize_input: true
