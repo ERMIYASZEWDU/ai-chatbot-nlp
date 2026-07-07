@@ -1,5 +1,7 @@
 # 🤖 AI CHATBOT (NLP) - ENHANCED FINAL SUMMARY
 
+## 🌐 **LIVE DEMO**: https://ai-chatbot-nlp1.streamlit.app/
+
 ## ✨ **MAJOR ENHANCEMENTS COMPLETED**
 
 ### 🧠 **Advanced NLP Engine**

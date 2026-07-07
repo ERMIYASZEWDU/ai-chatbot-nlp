@@ -5,8 +5,20 @@
 [![NLP](https://img.shields.io/badge/NLP-97%25_Accuracy-green.svg)](https://github.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Test Coverage](https://img.shields.io/badge/Tests-90.5%25_Score-brightgreen.svg)](https://github.com)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-🚀_Try_Now-ff69b4.svg)](https://ai-chatbot-nlp1.streamlit.app/)
 
 > **🚀 Production-ready AI chatbot with advanced NLP, glassmorphism UI, and comprehensive testing suite**
+
+## 🌐 **[🎯 LIVE DEMO - TRY NOW!](https://ai-chatbot-nlp1.streamlit.app/)**
+
+<div align="center">
+  <h3>
+    <a href="https://ai-chatbot-nlp1.streamlit.app/" target="_blank">
+      🚀 Launch Interactive Demo →
+    </a>
+  </h3>
+  <p><em>Experience the enhanced AI chatbot with 97% accuracy and real-time analytics!</em></p>
+</div>
 
 ---
 
@@ -46,6 +58,9 @@
 
 ## 🚀 Quick Start
 
+### 🌐 **Try the Live Demo**
+**🎯 [Launch Live Demo](https://ai-chatbot-nlp1.streamlit.app/)** - No installation needed!
+
 ### Prerequisites
 - Python 3.10+
 - Git (for cloning)
@@ -63,7 +78,7 @@ pip install -r requirements.txt
 # Run comprehensive tests (optional)
 python test_chatbot.py
 
-# Launch the enhanced chatbot
+# Launch the enhanced chatbot locally
 streamlit run chatbot.py
 ```
 
@@ -73,14 +88,17 @@ streamlit run chatbot.py
 START.bat
 ```
 
-### Access
-Open browser to: **http://localhost:8501**
+### Access Options
+- **🌐 Live Demo**: [https://ai-chatbot-nlp1.streamlit.app/](https://ai-chatbot-nlp1.streamlit.app/)
+- **💻 Local**: http://localhost:8501
 
 ---
 
 ## 📊 Enhanced Demo
 
 ### Advanced Chat Examples
+**🎯 [Try these live examples](https://ai-chatbot-nlp1.streamlit.app/)**
+
 ```
 User: "Track my order ORD-2024-001 for delivery to john.doe@email.com"
 AI: "Great news! 😊 Your order #ORD-2024-001 is out for delivery 🚚 
@@ -97,6 +115,8 @@ Sentiment: neutral 😐
 | "Reset password for user@company.com" | email | Personalized reset |
 | "Return my defective iPhone 13 Pro" | product_name | Product-specific refund |
 | "Package 1Z999AA1234567890 status?" | tracking_number | Carrier-specific tracking |
+
+**🌐 [Experience the full demo live!](https://ai-chatbot-nlp1.streamlit.app/)**
 
 ---
 
@@ -245,6 +265,7 @@ MIT License - Free for personal and commercial use
 
 ## 📞 Contact & Support
 
+- **🌐 Live Demo**: [ai-chatbot-nlp1.streamlit.app](https://ai-chatbot-nlp1.streamlit.app/)
 - **GitHub**: [@ERMIYASZEWDU](https://github.com/ERMIYASZEWDU)
 - **Repository**: [ai-chatbot-nlp](https://github.com/ERMIYASZEWDU/ai-chatbot-nlp)
 - **Issues**: [Report bugs or request features](https://github.com/ERMIYASZEWDU/ai-chatbot-nlp/issues)
@@ -258,8 +279,15 @@ MIT License - Free for personal and commercial use
   <br>
   <sub>Built with Python • Advanced NLP • Modern UI • Comprehensive Testing</sub>
   <br><br>
-  <a href="https://github.com/ERMIYASZEWDU/ai-chatbot-nlp">⭐ Star this repository if you found it helpful!</a>
-  <br>
-  <a href="https://github.com/ERMIYASZEWDU/ai-chatbot-nlp/issues">🐛 Report Issues</a> •
-  <a href="https://github.com/ERMIYASZEWDU/ai-chatbot-nlp/fork">🔱 Fork & Contribute</a>
+  <h3>
+    <a href="https://ai-chatbot-nlp1.streamlit.app/" target="_blank">
+      🌐 Try Live Demo
+    </a>
+    •
+    <a href="https://github.com/ERMIYASZEWDU/ai-chatbot-nlp">⭐ Star Repository</a>
+    •
+    <a href="https://github.com/ERMIYASZEWDU/ai-chatbot-nlp/issues">🐛 Report Issues</a>
+    •
+    <a href="https://github.com/ERMIYASZEWDU/ai-chatbot-nlp/fork">🔱 Fork & Contribute</a>
+  </h3>
 </div>
