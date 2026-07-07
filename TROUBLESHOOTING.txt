@@ -1,0 +1,163 @@
+========================================
+  AI CHATBOT - TROUBLESHOOTING GUIDE
+========================================
+
+🔧 PROBLEM: Can't reach localhost:8501
+========================================
+
+SOLUTION 1: Use the START.bat file
+-----------------------------------
+Double-click: START.bat
+
+This will automatically:
+- Clear old processes
+- Start the chatbot
+- Open on port 8501
+
+========================================
+
+SOLUTION 2: Manual Start
+-------------------------
+1. Open Command Prompt or PowerShell
+2. Navigate to the folder:
+   cd "C:\Users\ERMI\Desktop\AI Training\AI Chatbot (NLP)"
+3. Run:
+   streamlit run chatbot.py
+4. Wait for the message:
+   "You can now view your Streamlit app in your browser"
+5. Open browser to: http://localhost:8501
+
+========================================
+
+SOLUTION 3: Check if Already Running
+-------------------------------------
+1. Open Task Manager (Ctrl+Shift+Esc)
+2. Look for "streamlit.exe"
+3. If found, end the task
+4. Try starting again with START.bat
+
+========================================
+
+SOLUTION 4: Use Different Port
+-------------------------------
+If port 8501 is busy:
+
+streamlit run chatbot.py --server.port 8502
+
+Then open: http://localhost:8502
+
+========================================
+
+SOLUTION 5: Check Installation
+-------------------------------
+1. Open Command Prompt
+2. Run: pip install streamlit
+3. Wait for installation
+4. Try starting again
+
+========================================
+
+🌐 ALTERNATIVE ACCESS METHODS:
+==============================
+
+If localhost doesn't work, try:
+
+1. Network URL:
+   http://10.62.81.57:8501
+
+2. IPv4:
+   http://127.0.0.1:8501
+
+3. Computer Name:
+   http://YOUR-COMPUTER-NAME:8501
+
+========================================
+
+✅ VERIFICATION STEPS:
+======================
+
+1. Check Streamlit is installed:
+   python -c "import streamlit; print('OK')"
+
+2. Check chatbot.py exists:
+   dir chatbot.py
+
+3. Check port is free:
+   netstat -ano | findstr :8501
+
+4. Check firewall settings:
+   Make sure port 8501 is not blocked
+
+========================================
+
+🎯 QUICK FIX:
+=============
+
+If nothing works:
+
+1. Close ALL browser windows
+2. Close ALL command prompts
+3. Restart computer
+4. Double-click START.bat
+5. Open browser to http://localhost:8501
+
+========================================
+
+📞 COMMON ERRORS & FIXES:
+=========================
+
+ERROR: "Address already in use"
+FIX: Kill existing streamlit process or use different port
+
+ERROR: "Module not found"
+FIX: pip install streamlit
+
+ERROR: "Permission denied"
+FIX: Run as administrator
+
+ERROR: "Port not available"
+FIX: Use different port (--server.port 8502)
+
+========================================
+
+🔍 DEBUGGING:
+=============
+
+Check what's running on port 8501:
+netstat -ano | findstr :8501
+
+Kill process on port 8501:
+taskkill /F /PID [PID_NUMBER]
+
+Check Python installation:
+python --version
+
+Check Streamlit installation:
+streamlit --version
+
+========================================
+
+✅ CURRENT STATUS:
+==================
+
+App: RUNNING
+Port: 8501
+URL: http://localhost:8501
+
+If you see this and still can't connect:
+1. Try closing and reopening browser
+2. Clear browser cache
+3. Try different browser
+4. Check firewall settings
+
+========================================
+
+💡 TIP:
+=======
+
+The easiest way to start is:
+Just double-click START.bat file!
+
+It handles everything automatically.
+
+========================================

@@ -1,7 +1,7 @@
 # Python
 __pycache__/
 *.py[cod]
-*$py.class"
+*$py.class
 *.so
 .Python
 build/
@@ -21,69 +21,21 @@ wheels/
 *.egg
 MANIFEST
 
-# Virtual Environments
-.env
-.venv
-env/
+# Virtual Environment
 venv/
+env/
 ENV/
 env.bak/
 venv.bak/
-.env.local
-.env.*.local
 
-# IDE & Editors
-.vscode/
+# IDE
 .idea/
+.vscode/
 *.swp
 *.swo
 *~
-.project
-.pydevproject
-.settings/
-*.sublime-workspace
-*.sublime-project
 
-# Models and Data (keep structure, ignore content)
-models/*.pkl
-models/*.joblib
-models/*.bin
-models/*.pt
-models/*.h5
-!models/.gitkeep
-data/processed/*.json
-!data/processed/.gitkeep
-
-# Logs
-logs/
-*.log
-
-# Flask
-instance/
-.webassets-cache
-
-# Testing & Coverage
-.coverage
-.pytest_cache/
-.tox/
-htmlcov/
-coverage.xml
-*.cover
-.hypothesis/
-
-# Type Checking
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Ruff
-.ruff_cache/
-
-# Documentation
-docs/_build/
-site/
-
-# OS Generated
+# OS
 .DS_Store
 .DS_Store?
 ._*
@@ -91,16 +43,28 @@ site/
 .Trashes
 ehthumbs.db
 Thumbs.db
-desktop.ini
 
-# Jupyter Notebooks
-.ipynb_checkpoints/
+# Logs
+*.log
 
-# Package Files
-*.tar.gz
-*.zip
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Temporary Files
-*.tmp
-*.temp
-*.bak
+# Streamlit
+.streamlit/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+.coverage
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
